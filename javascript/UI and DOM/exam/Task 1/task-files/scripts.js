@@ -20,7 +20,7 @@ function createImagesPreviewer(selector, items) {
 
     sidebar.style.width = '200px';
     sidebar.style.height = '500px';
-    sidebar.style.overflow = 'scroll';
+    sidebar.style.overflowY = 'scroll';
     sidebar.style.float = 'left';
     sidebar.style.textAlign = 'center';
     image.style.width = '100%';
