@@ -1,13 +1,13 @@
 $.fn.gallery = function (cols) {
     cols = cols || 4;
+    //cols = 1;
     var $container = this;
     $container.addClass('gallery');
     var $selected = $container.find('.selected')
         .hide();
-    var imageWidth = parseInt($container.find('.image-container').css('width'), 10);
-    var imageMargin = parseInt($container.find('.image-container').css('margin'), 10);
-    var galeryWidth = cols * imageWidth + (cols + 1) * (imageMargin + 5);
-    $container.css('width', '' + galeryWidth + 'px');
+    var newLineSelector = '.image-container:nth-child(' + cols + 'n+1)';
+    $container.find(newLineSelector)
+        .addClass('clearfix');
     var $blockerDiv = $('<div>').insertBefore($selected)
         .addClass('disabled-background')
         .hide();
