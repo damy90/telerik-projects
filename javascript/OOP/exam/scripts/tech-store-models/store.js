@@ -71,7 +71,7 @@ define(['tech-store-models/item'], function () {
 
             filterItemsByName: function (name) {
                 var result = filter(this._items, {
-                    name: name
+                    name: name.toLocaleLowerCase()
                 });
                 result = result.sort(createCompareByPropFunction('name'));
                 return result;
