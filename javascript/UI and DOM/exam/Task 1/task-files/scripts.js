@@ -10,6 +10,7 @@ function createImagesPreviewer(selector, items) {
     var selectedImage = document.createElement('img');
     var inputLabel = document.createElement('p');
 
+    //test comit
     filter.addEventListener('keyup', showResults);
 
     imageContainer.appendChild(imageAnchor);
